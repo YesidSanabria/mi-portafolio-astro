@@ -34,7 +34,7 @@ const { title, description = "Portafolio de Yesid Sanabria - Desarrollador Full 
     <main>
       <slot />
     </main>
-    <Footer />
+    <Footer class="text-black dark:text-white transition-colors duration-300"></Footer>
     <script src="/theme-toggle.js" defer></script>
   </body>
 </html>
@@ -48,11 +48,14 @@ const { title, description = "Portafolio de Yesid Sanabria - Desarrollador Full 
     --text-primary: #000000;
     --text-secondary: #313131;
     --text-terceary: #054faa;
+    --text-terceary-hover: #043775;
     --scrollbarter: #054faa;
     --background: #CDD5DB;
     --background-border: #ebebeb;
 
     --background-gradient: linear-gradient(to bottom, #CDD5DB, #02244d);
+    --background-prefoter: #02244d;
+    --background-footer: #02244d;
   }
   
   * {
@@ -70,11 +73,14 @@ const { title, description = "Portafolio de Yesid Sanabria - Desarrollador Full 
     --text-primary: #ffffff;
     --text-secondary: #a0a0a0;
     --text-terceary: #d4af81;
+    --text-terceary-hover: #a88b66;
     --scrollbarter: #054faa;
     --background: #021A37;
     --background-border: rgb(27, 27, 27);
 
      --background-gradient: linear-gradient(to bottom, #021124, #000000);
+     --background-prefoter: #02244d;
+     --background-footer: linear-gradient(to bottom, #051b35 0%, #010f20 100%);
   }
 
 

@@ -1,5 +1,4 @@
 <footer class="footer">
-  <!-- Call to Action Section -->
   <section class="cta-section">
     <div class="cta-container">
       <div class="cta-content">
@@ -26,7 +25,7 @@
     <div class="footer-container">
       <!-- Brand -->
       <div class="footer-brand">
-        <span class="footer-logo">EFEELE</span>
+        <a href="#top" class="footer-logo">YCFR</a>
       </div>
       
       <!-- Developer Info -->
@@ -69,12 +68,12 @@
 
 <style>
   .footer {
-    background: linear-gradient(135deg, #1a4d3a 0%, #0f2a1f 100%);
-    color: white;
+    background: var(--background)
   }
   
   /* CTA Section */
   .cta-section {
+    background: var(--background-prefoter);
     padding: 4rem 0;
   }
   
@@ -100,7 +99,7 @@
   }
   
   .highlight {
-    color: #4ade80;
+    color: var(--text-terceary);
   }
   
   .cta-button-container {
@@ -111,26 +110,26 @@
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
-    background-color: #4ade80;
-    color: #1a4d3a;
+    background-color: var(--text-terceary);
+    color: var( --text-primary);
     padding: 1rem 2rem;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
     font-size: 1.1rem;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 14px 0 rgba(74, 222, 128, 0.3);
+    box-shadow: 0 4px 14px 0 rgba(81, 133, 182, 0.3);
   }
   
   .cta-button:hover {
-    background-color: #22c55e;
+    background-color: var(--text-terceary-hover);
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(74, 222, 128, 0.4);
+    box-shadow: var(--text-terceary-hover);
   }
   
   /* Footer Info */
   .footer-info {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: var(--background);
     padding: 2rem 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
@@ -146,24 +145,31 @@
   }
   
   .footer-logo {
+    color: var(--text-primary);
+    text-decoration: none;
     font-size: 1.5rem;
     font-weight: bold;
-    font-family: 'Courier New', monospace;
-    letter-spacing: 2px;
+    font-family: 'Montserrat Variable', sans-serif;
+    font-style: italic;
+    letter-spacing: -2px;
+  }
+
+  .footer-logo:hover {
+    color: var(--primary-blue);
   }
   
   .developer-info {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: #ccc;
+    color: var(--text-primary);
     font-size: 0.9rem;
   }
   
   .code-icon {
     font-family: 'Courier New', monospace;
     font-size: 1.2rem;
-    color: #4ade80;
+    color: var(--text-primary);
   }
   
   .footer-social {
@@ -172,7 +178,7 @@
   }
   
   .footer-social-link {
-    color: #ccc;
+    color: var(--text-primary);
     padding: 0.75rem;
     border-radius: 0.5rem;
     transition: all 0.3s ease;
@@ -180,8 +186,8 @@
   }
   
   .footer-social-link:hover {
-    color: #4ade80;
-    background-color: rgba(74, 222, 128, 0.2);
+    color: var(--primary-blue);
+    background-color: rgba(74, 133, 222, 0.2);
     transform: translateY(-2px);
   }
   
