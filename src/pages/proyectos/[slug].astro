@@ -1,0 +1,47 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import projects from '../../data/proyectos.json';
+
+export async function getStaticPaths() {
+  return projects.map(project => ({
+    params: { slug: project.id }, // Define la URL (ej: /proyectos/mi-ecommerce)
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+---
+
+<Layout title={project.id}>
+  <main class="max-w-4xl mx-auto p-8 text-white">
+    <h1 class="text-5xl font-extrabold mb-4">{project.id}</h1>
+    <span class={`inline-block px-3 py-1 text-sm font-semibold rounded-full mb-8 ${project.desarrollo === 'Fullstack' ? 'bg-blue-500' : 'bg-green-500'}`}>
+      {project.desarrollo}
+    </span>
+
+    <img src={project.imagenPrincipal} alt={`Imagen de ${project.id}`} class="w-full rounded-lg shadow-xl mb-8" />
+    <div class="prose prose-invert lg:prose-xl max-w-none">
+      <p>{project.descripcionCorta}</p>
+    </div>
+
+    <div class="my-8">
+      <h3 class="text-2xl font-bold mb-4">Tecnologías</h3>
+      <div class="flex flex-wrap gap-2">
+        {project.tecnologias.map(tech => (
+          <span class="bg-gray-700 px-3 py-1 rounded-md text-sm">{tech}</span>
+        ))}
+      </div>
+    </div>
+    
+    <div class="flex gap-4 mt-12">
+      <a href={project.linkDemo} target="_blank" rel="noopener noreferrer" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded transition-colors">
+        Ver Proyecto en Vivo 🚀
+      </a>
+      <a href={project.linkDemo} target="_blank" rel="noopener noreferrer" class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded transition-colors">
+        Código Fuente &lt;/&gt;
+      </a>
+    </div>
+    
+    <a href="/" class="inline-block mt-12 text-indigo-400 hover:underline">&larr; Volver a todos los proyectos</a>
+  </main>
+</Layout>

@@ -1,28 +1,38 @@
 ---
-
+import projects from '../../data/proyectos.json';
 ---    
 <!-- Content Legend / Colecciones por json --->
 
-<div>
-    <div class="relative lg:row-span-2">
-    <div class="absolute inset-px rounded-lg bg-gray-800 lg:rounded-l-4xl"></div>
-    <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
-        <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
-        <p class="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">Mobile friendly</p>
-        <p class="mt-2 max-w-lg text-sm/6 text-gray-400 max-lg:text-center">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.</p>
-        </div>
-        <div class="@container relative min-h-120 w-full grow max-lg:mx-auto max-lg:max-w-sm">
-        <div class="absolute inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 outline outline-white/20">
-            <img src="https://tailwindcss.com/plus-assets/img/component-images/bento-03-mobile-friendly.png" alt="" class="size-full object-cover object-top" />
-        </div>
-        </div>
-    </div>
-    <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-white/15 lg:rounded-l-4xl"></div>
-    </div>
+<div class="container">
+    {
+        projects.map((project) => (
+        <a href={`/proyectos/${project.id}`} class="block bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+            <img src={project.imagenPrincipal} alt={`Imagen de ${project.id}`} class="w-full h-48 object-cover" />
+            
+            <div class="p-6">
+            <span 
+                class={`inline-block px-2 py-1 text-xs font-semibold rounded-full mb-2 ${project.desarrollo === 'Fullstack' ? 'bg-blue-500 text-white' : 'bg-green-500 text-white'}`}
+            >
+                {project.desarrollo}
+            </span>
+            <h2 class="text-2xl font-bold mb-2 text-white">{project.id}</h2>
+            <p class="text-gray-300 text-base">{project.descripcionCorta}</p>
+            </div>
+        </a>
+        ))
+    }
 </div>
-
  <style>
 
-    
+.container {
+    margin-top: 40px;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 40px;
+	align-items: center;
+}
 
 

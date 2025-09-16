@@ -17,6 +17,7 @@
   "funcion3_1":": Integración de dos formularios distintos (Contacto y Proveedores) con el backend de Netlify Forms, incluyendo validación de tipo de archivo y envíos AJAX sin recarga de página. ",
   "funcion4": "Diseño Completamente Responsivo",
   "funcion4_1":": La maquetación se adapta a cualquier dispositivo, desde móviles hasta escritorios, utilizando técnicas modernas de CSS como Flexbox y Grid Layout para garantizar una visualización óptima.",
+
   "rol": "Desarrollador Front-end",
   "imagenPrincipal": "assets/img_proyectos/indumarmol_principal.jpg",
   "imagen1": "assets/img_proyectos/indumarmol_1.jpg",

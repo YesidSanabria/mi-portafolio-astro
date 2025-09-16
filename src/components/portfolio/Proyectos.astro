@@ -1,6 +1,11 @@
 ---
 import Card from '../ui/Card.astro';
-import Proyecos from '../../data/proyectos.json';
+import { getCollection } from 'astro:content';
+import projects from '../data/proyectos.json'; // ¡Importamos los datos!
+
+const proyectos = await getCollection('proyectos');
+console.log(proyectos);
+
 ---
 
 <section class="hero" id="proyectos">
@@ -9,11 +14,7 @@ import Proyecos from '../../data/proyectos.json';
             <span class="dark:text-[var(--text-terceary)] text-black">Proyectos</span> 
             Terminados
         </h1>
-        <div class="container">
-            <Card />
-            <Card />
-            <Card />
-        </div>
+        <Card />
     </div>
 </section>
 

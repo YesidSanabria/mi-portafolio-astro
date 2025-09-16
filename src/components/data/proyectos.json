@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "slug": "mi-ecommerce-de-ropa",
+    "name": "E-commerce de Ropa",
+    "type": "Fullstack",
+    "image": "/images/proyecto-ecommerce.png",
+    "short_description": "Una tienda online moderna y responsiva construida con Next.js y Stripe para los pagos.",
+    "full_description": "Este proyecto fue un reto completo que abarcó desde el diseño de la base de datos en PostgreSQL hasta el despliegue en Vercel. Se implementó autenticación de usuarios, un carrito de compras persistente y un panel de administrador para gestionar productos.",
+    "technologies": ["Next.js", "React", "Tailwind CSS", "Stripe", "PostgreSQL"],
+    "live_url": "https://mi-tienda.com",
+    "repo_url": "https://github.com/tu-usuario/ecommerce"
+  },
+  {
+    "id": 2,
+    "slug": "landing-page-para-startup",
+    "name": "Landing Page para Startup",
+    "type": "Frontend",
+    "image": "/images/proyecto-landing.png",
+    "short_description": "Una landing page optimizada para la conversión, desarrollada con Astro y Tailwind CSS.",
+    "full_description": "El objetivo era crear una página de aterrizaje extremadamente rápida y con un SEO impecable. Se utilizó Astro por su capacidad de generar HTML estático sin JavaScript por defecto, logrando puntuaciones perfectas en Lighthouse.",
+    "technologies": ["Astro", "Tailwind CSS", "JavaScript"],
+    "live_url": "https://startup-landing.com",
+    "repo_url": "https://github.com/tu-usuario/landing-page"
+  }
+]
