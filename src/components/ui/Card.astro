@@ -1,38 +1,121 @@
 ---
+// Importamos los proyectos desde el archivo JSON
 import projects from '../../data/proyectos.json';
 ---    
-<!-- Content Legend / Colecciones por json --->
 
 <div class="container">
     {
         projects.map((project) => (
-        <a href={`/proyectos/${project.id}`} class="block bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300">
-            <img src={project.imagenPrincipal} alt={`Imagen de ${project.id}`} class="w-full h-48 object-cover" />
+        <a href={`/proyectos/${project.id}`} class="card">
+            <div class="image-container">
+                <img 
+                  src={project.imagenPrincipal} 
+                  alt={`Imagen de ${project.id}`} 
+                  class="card-image"
+                />
+                <!-- Tag superpuesto -->
+                <span class="tagCad">{project.desarrollo}</span>
+            </div>
             
-            <div class="p-6">
-            <span 
-                class={`inline-block px-2 py-1 text-xs font-semibold rounded-full mb-2 ${project.desarrollo === 'Fullstack' ? 'bg-blue-500 text-white' : 'bg-green-500 text-white'}`}
-            >
-                {project.desarrollo}
-            </span>
-            <h2 class="text-2xl font-bold mb-2 text-white">{project.id}</h2>
-            <p class="text-gray-300 text-base">{project.descripcionCorta}</p>
+            <div class="card-content">
+                <h2 class="card-title">{project.titulo}</h2>
+                <p class="card-description">{project.descripcionCorta}</p>
+            </div>
+            <div class="project-tags">
+                {project.tecnologias.map((tecnologia) => (
+                    <span class="tags">{tecnologia}</span>
+                ))}
             </div>
         </a>
         ))
     }
 </div>
- <style>
 
-.container {
-    margin-top: 40px;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    gap: 40px;
-	align-items: center;
+<style>
+  .container {
+  margin-top: 40px;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  align-items: center;
 }
 
+.card {
+  background-color: var(--background);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
 
+.card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-image {
+  transform: scale(1.01); 
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-title {
+  text-align: left;
+  color: var(--primary-blue);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.card-description {
+  text-align: left;
+  font-size: 0.8rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.tagCad {
+  position: absolute;
+  top: 5%;
+  left: 14%;
+  transform: translate(-50%, -50%);
+  background-color: #0C2840;
+  color: #ffffff;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75em;
+  font-weight: 500;
+  z-index: 10;
+}
+
+.project-tags {
+    padding: 24px;
+    padding-top: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.tags {
+    background-color: var(--primary-blue);
+    color: var(--text-cuaterceary);
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75em;
+    font-weight: 500;
+    border: 1px solid #30363d;
+}
+</style>
