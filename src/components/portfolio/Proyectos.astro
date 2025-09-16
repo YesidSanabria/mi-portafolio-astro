@@ -1,0 +1,46 @@
+---
+import Card from '../ui/Card.astro';
+import Proyecos from '../../data/proyectos.json';
+---
+
+<section class="hero" id="proyectos">
+    <div class="flex flex-col items-center text-center">
+        <h1 class="mx-auto mt-2 max-w-max text-center font-bold tracking-tight text-balance text-white sm:text-5xl">
+            <span class="dark:text-[var(--text-terceary)] text-black">Proyectos</span> 
+            Terminados
+        </h1>
+
+        Proyectos.map((projecto) => (
+            <a href="/proyectos"></a>
+        ))
+
+
+
+        <div class="container">
+            <Card />
+            <Card />
+            <Card />
+        </div>
+    </div>
+</section>
+
+
+<style>
+.hero {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh; 
+    overflow-x: hidden;
+}
+.container {
+    margin-top: 40px;
+    width: 100%;
+    height: 50%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 4px;
+	align-items: center;
+}
