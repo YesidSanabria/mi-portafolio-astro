@@ -1,0 +1,210 @@
+---
+
+---
+
+<section class="hero" id="experiencia">
+    <div class="flex flex-col items-center text-center">
+      <h1 class="mx-auto mt-2 max-w-lg text-center text-4xl font-bold tracking-tight text-balance text-white sm:text-5xl">
+        <span class="dark:text-[var(--text-terceary)] text-black">Experiencia</span> 
+        Laboral
+      </h1>
+      <ol class="text-left container">
+        <li>
+          <div class="grid grid-cols-[30%_70%] gap-4 gr">
+            <div class="box">
+              <p class="">
+                <strong class="dark:text-[var(--text-terceary)] text-black">Desarrollador</strong>
+              </p>
+              <p class="">
+                <strong class="mb-100px">YCFR</strong>
+              </p>
+              <strong class="">Actualmente</strong>
+            </div>
+            <div>
+              <div>
+                Responsable del desarrollo y diseño de páginas web, mejorando la experiencia del usuario y aumentando el alcance de las mismas un 30%.
+              </div>
+              <div>
+                ▫️ Integración de APIs y servicios externos para mejorar la funcionalidad.
+              </div>
+              <div>
+                ▫️ Implementación de prácticas de SEO para mejorar el posicionamiento en buscadores.
+              </div>
+              <div>
+                ▫️ Realización de pruebas de usabilidad y ajuste de interfaces según feedback de usuarios.
+              </div>
+            </div>      
+          </div>
+        </li>
+        <li>
+          <div class="grid grid-cols-[30%_70%] gap-4 gr">
+            <div class="box">
+              <p class="">
+                <strong class="dark:text-[var(--text-terceary)] text-black">Practicante Universitario</strong>
+              </p>
+              <p class="">
+                <strong class="mb-100px">Claro Colombia</strong>
+              </p>
+              <strong class="">Agosto 2022 - Enero 2023</strong>
+            </div>
+            <div>
+              <div>
+                Responsable de la gestión de datos del área de recursos humanos, mejorando un 40% la eficiencia operativa para la manipulacion de los mismos. Por medio de aplicativo web.
+              </div>
+              <div>
+                ▫️ Automatización de actividades con plataforma, mediante procesos Etl.
+              </div>
+              <div>
+                ▫️ Solución de incidentes para cliente interno.
+              </div>
+            </div>      
+          </div>
+        </li>
+      </ol>  
+    </div>
+    </h1>
+  </section>
+
+  <style>
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh; 
+  overflow-x: hidden;
+  }
+
+.container {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 4px;
+	align-items: center;
+  }
+  
+.hero-content {
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+  }
+
+  .social {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 60px;
+  gap: 10px;
+}
+
+.social.hover {
+  color: var(--primary-blue);
+  transform: translateY(-3px);
+}
+
+.gr{
+  margin-top: 40px;
+}
+
+.parrafosinespacio{
+  width: 100%;
+}
+.experience {
+  list-style-type: none;
+  margin-top: 40px;
+  margin-bottom: 0px;
+}
+
+.grids{
+  width: 100%;
+  display: grid;
+  grid-template-columns:1fr 1fr;
+  align-items: start;
+  gap: 5px;
+  margin: 0 auto;
+}
+
+
+.box{
+  padding-left: 10px;
+  position: relative;  
+  height: 115px;
+}
+
+
+.box::before{
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 145%;
+  background-color: var(--text-terceary);
+  left: -15px;
+  top: 0px; 
+}
+
+.box::after{
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--text-terceary);
+  left: -19px;
+  top: 20px; 
+}
+
+/* #region Responsive */
+
+/* Para pantallas pequeñas y medianas */
+@media (max-width: 768px) {
+  .hero {
+    margin-top: 80px;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100vh;
+  }
+
+  .hero-content {
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .social {
+    margin-top: 40px;
+    justify-content: center;
+  }
+
+  .grids {
+    grid-template-columns: 1fr;
+  }
+
+  .box {
+    height: auto;
+    padding-left: 0;
+  }
+
+  .box::before {
+    display: none;
+  }
+
+  .box::after {
+    left: -10px;
+  }
+}
+
+/* Para pantallas grandes */
+@media (min-width: 1024px) {
+  .hero {
+    min-height: 80vh;
+  }
+
+  .grids {
+    grid-template-columns: 1fr 1fr 1fr; 
+  }
+
+  .box {
+    height: 130px;
+  }
+}
+
+
+/* #endregion Responsive */
+ 
