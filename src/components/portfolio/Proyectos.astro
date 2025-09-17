@@ -6,16 +6,17 @@ import { getCollection } from 'astro:content';
 ---
 <section id="proyectos" class="hero">
     <div class="flex flex-col items-center text-center">
-        <h1 class="mx-auto mt-2 max-w-max text-center font-bold tracking-tight text-balance text-[var(--text-primary)] sm:text-5xl">
+        <h1 class="mx-auto mt-2 max-w-max text-center font-bold tracking-tight text-balance text-[var(--text-primary)] sm:text-3xl md:text-4xl lg:text-5xl">
             <span class="text-[var(--text-terceary)]">Proyectos</span>
             Terminados
         </h1>
-        <p class="z-2 text-center mx-auto text-lg max-xl:text-base max-w-2xl text-[var(--text-primary)] my-6 leading-6 font-medium">
-        Me encanta <b class="text-[var(--text-terceary)]">convertir ideas en proyectos reales.</b> <br> Aquí les muestro algunos de los <b class="text-[var(--text-terceary)]">desarrollos</b> en los que he trabajado, aplicando tecnología, diseño y mucha creatividad.
-        <b class="text-[var(--text-terceary)]">Hagan un vistazo!</b> </p>
+        <p class="z-2 text-center mx-auto text-lg sm:text-base md:text-lg lg:text-lg max-w-2xl text-[var(--text-primary)] my-6 leading-6 font-medium">
+            Me encanta <b class="text-[var(--text-terceary)]">convertir ideas en proyectos reales.</b> <br> Aquí les muestro algunos de los <b class="text-[var(--text-terceary)]">desarrollos</b> en los que he trabajado, aplicando tecnología, diseño y mucha creatividad.
+            <b class="text-[var(--text-terceary)]">¡Hagan un vistazo!</b>
+        </p>
         <Card />
-        <a href="/" class="proy">          
-          Ver todos los proyectos
+        <a href="/" class="proy text-lg sm:text-base md:text-lg lg:text-lg mt-8">
+            Ver todos los proyectos
         </a>
     </div>
 </section>
@@ -46,4 +47,65 @@ import { getCollection } from 'astro:content';
 .proy{
 
     padding-top: 40px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .hero {
+        min-height: 50vh;
+    }
+
+    .hero h1 {
+        font-size: 4xl; /* Ajuste de tamaño de fuente */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Texto más pequeño en pantallas más pequeñas */
+        padding: 0 1rem; /* Añadimos padding a los lados */
+    }
+
+    .proy {
+        padding-top: 20px; /* Reducimos el espacio de padding en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 45vh; /* Ajuste de altura */
+    }
+
+    .hero h1 {
+        font-size: 3xl; /* Reducimos el tamaño del título */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Ajuste de tamaño de fuente */
+        padding: 0 1rem; /* Aseguramos que el texto no se salga de la pantalla */
+    }
+
+    .proy {
+        padding-top: 15px; /* Menos espacio para pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        min-height: 40vh; /* Altura aún más pequeña para móviles */
+        padding: 0 1rem; /* Reducir márgenes laterales en móviles */
+    }
+
+    .hero h1 {
+        font-size: 2xl; /* Ajuste del tamaño de fuente del título */
+        text-align: center;
+    }
+
+    .hero p {
+        font-size: 0.875rem; /* Texto más pequeño */
+        padding: 0; /* Quitamos padding adicional */
+    }
+
+    .proy {
+        padding-top: 10px; /* Ajuste de padding en móviles */
+        font-size: 0.875rem; /* Reducimos tamaño de fuente para botones */
+    }
 }
