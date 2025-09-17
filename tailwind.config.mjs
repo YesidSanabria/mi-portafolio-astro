@@ -1,8 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    './src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
+  files: [
+    './src/**/*.{astro,html,js,jsx,svelte,ts,tsx,vue}',
   ],
+  
+  safelist: [
+  "bg-[var(--background-gradient)]",
+    "dark:bg-[var(--background-gradient)]",
+    "bg-[image:var(--background-gradient)]",
+    "dark:bg-[image:var(--background-gradient)]",
+],
   theme: {
     extend: {},
   },

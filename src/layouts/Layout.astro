@@ -2,6 +2,7 @@
 import '@fontsource-variable/montserrat';
 import Header from '../layouts/Header.astro';
 import Footer from '../layouts/Footer.astro';
+import "../styles/global.css";
 
 export interface Props {
   title: string;
@@ -25,7 +26,7 @@ const { title, description = "Portafolio de Yesid Sanabria - Desarrollador Full 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/src/styles/global.css">
+    
   </head>
 
   <!-- Estructuracion de componentes y paginas -->
@@ -35,7 +36,8 @@ const { title, description = "Portafolio de Yesid Sanabria - Desarrollador Full 
       <slot />
     </main>
     <Footer class="text-black dark:text-white transition-colors duration-300"></Footer>
-    <script src="/src/scripts/theme-toggle.js" defer></script>
+    <script src="../scripts/theme-toggle.js" is:inline></script><script src="/scripts/theme-toggle.js" defer></script>
+
   </body>
   
 
