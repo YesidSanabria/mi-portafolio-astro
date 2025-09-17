@@ -1,0 +1,130 @@
+<section class="hero" id="tecnologia">  
+    <div class="flex flex-col items-center text-center">
+        <div class="flex">
+            <svg class="justify-center size-11" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 10l-2 -6" /><path d="M7 10l2 -6" /><path d="M11 20h-3.756a3 3 0 0 1 -2.965 -2.544l-1.255 -7.152a2 2 0 0 1 1.977 -2.304h13.999a2 2 0 0 1 1.977 2.304c-.21 1.202 -.37 2.104 -.475 2.705" /><path d="M10 14a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /><path d="M20 21l2 -2l-2 -2" /><path d="M17 17l-2 2l2 2" /></svg>
+            <h1 class="mx-auto mt-2 max-w-lg text-center text-4xl font-bold tracking-tight text-balance text-[var(--text-primary)] sm:text-5xl">
+            Pila
+            <span class="text-[var(--text-terceary)]">tecnológica</span>
+            </h1>
+        </div>
+        <section class="grid grid-cols-2 grid-rows-2 gap-10 max-w-5xl">
+            <article class="article">
+                <h1 class="mx-auto mt-2 max-w-lg text-center text-4xl font-bold tracking-tight text-balance text-[var(--text-primary)] sm:text-3xl">
+                    Frontend
+                </h1>
+                <ul class="ulcontent">
+                    <li><img src="src/icons/html5.svg" alt="HTML5" class="size-9"><span class="nombre-tecnologia">HTML</span></li>
+                    <li><img src="src/icons/css_old.svg" alt="CSS3" class="size-9"><span class="nombre-tecnologia">CSS</span></li>
+                    <li><img src="src/icons/javascript.svg" alt="JavaScript" class="size-9"><span class="nombre-tecnologia">JavaScript</span></li>
+                    <li><img src="src/icons/angular.svg" alt="Angular" class="size-9"><span class="nombre-tecnologia">Angular</span></li>
+                    <li><img src="src/icons/typescript.svg" alt="TypeScript" class="size-9"><span class="nombre-tecnologia">TypeScript</span></li>
+                </ul>
+            </article>
+            <article class="article">
+                <h1 class="mx-auto mt-2 max-w-lg text-center text-4xl font-bold tracking-tight text-balance text-[var(--text-primary)] sm:text-3xl">
+                    Backend
+                </h1>    
+                    <ul class="ulcontent">
+                        <li><img src="src/icons/python.svg" alt="Python" class="size-9"><span class="nombre-tecnologia">Python</span></li>
+                        <li><img src="src/icons/java.svg" alt="Java" class="size-9"><span class="nombre-tecnologia">Java</span></li>
+                        <li><img src="src/icons/mysql.svg" alt="MySQL" class="size-9"><span class="nombre-tecnologia">MySQL</span></li>
+                        <li><img src="src/icons/php_dark.svg" alt="PHP" class="size-9"><span class="nombre-tecnologia">PHP</span></li>
+                        <li><img src="src/icons/firebase.svg" alt="Firebase" class="size-9"><span class="nombre-tecnologia">Firebase</span></li>
+                    </ul>
+                </article>
+            <article class="article">
+                <h1 class="mx-auto mt-2 max-w-lg text-center text-4xl font-bold tracking-tight text-balance text-[var(--text-primary)] sm:text-3xl">
+                Aprendiendo
+                </h1>               
+            <ul class="ulcontent">
+                <li><img src="src/icons/angular.svg" alt="Angular" class="size-9"><span class="nombre-tecnologia">Angular</span></li>
+                <li><img src="src/icons/python.svg" alt="Python" class="size-9"><span class="nombre-tecnologia">Python</span></li>
+                <li><img src="src/icons/tailwindcss.svg" alt="Tailwind" class="size-9"><span class="nombre-tecnologia">Tailwindcss</span></li>
+            </ul>
+            </article>
+            <article class="article">
+                <h1 class="mx-auto mt-2 max-w-lg text-center text-4xl font-bold tracking-tight text-balance text-[var(--text-primary)] sm:text-3xl">
+                    Herramientas
+                </h1>              
+                <ul class="ulcontent">
+                    <li><img src="src/icons/vscode.svg" alt="VSCode" class="size-9"><span class="nombre-tecnologia">VSCode</span></li>
+                    <li><img src="src/icons/eclipse.svg" alt="Eclipse" class="size-9"><span class="nombre-tecnologia">Eclipse</span></li>
+                    <li><img src="src/icons/git.svg" alt="Git" class="size-9"><span class="nombre-tecnologia">Git</span></li>
+                    <li><img src="src/icons/github_dark.svg" alt="HTML5" class="size-9"><span class="nombre-tecnologia">GitHub</span></li>
+                    <li><img src="src/icons/postman.svg" alt="Postman" class="size-9"><span class="nombre-tecnologia">Postman</span></li>
+                </ul>
+            </article>
+        </section>
+    </div>
+</section>
+<style>
+
+.hero {
+    padding-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh; 
+    overflow-x: hidden;
+}
+
+.hero h1{
+    padding-left: 10px;
+    padding-bottom: 40px;
+}
+
+.container {
+  max-width: 750px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: stretch;
+}
+
+.article {
+  width: 100%;
+  background: linear-gradient(to bottom, #021835, #0F172A);
+  padding: 24px;
+  height: 350px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ulcontent {
+  width: 100%; 
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1.2fr);
+  grid-template-rows: repeat(3, 1fr);
+  margin: 0;
+  padding: 10px;
+  gap: 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+
+.article .ulcontent > li,
+.article .ulcontent > div {
+  display: flex;
+  flex-direction: column;  /* Cambia la dirección de los elementos dentro del li */
+  align-items: center;     /* Centra los elementos horizontalmente */
+  justify-content: center; /* Centra los elementos verticalmente */
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.article .ulcontent > li img {
+  margin-bottom: 8px; /* Añade espacio entre el ícono y el texto */
+}
+
+.nombre-tecnologia {
+  font-size: 0.85rem;
+  color: #ffffff; 
+  display: block; 
+  width: 100%;
+  white-space: normal;
+  line-height: 1.2;
+  flex-shrink: 0;
+ }

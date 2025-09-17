@@ -3,34 +3,15 @@ import Layout from '../layouts/Layout.astro';
 import Presentacion from '../components/portfolio/Presentacion.astro';
 import Experiencia from '../components/portfolio/Experiencia.astro';
 import Proyectos from '../components/portfolio/Proyectos.astro';
+import Tecnologias from '../components/portfolio/Tecnologias.astro';
 ---
 
 <Layout title="Portafolio de Yesid Sanabria - Desarrollador y Programador"
         description="Contrata a Yesid Sanabria, un desarrollador y programador talentoso, para llevar tus proyectos al siguiente nivel. Con habilidades en desarrollo web, aplicaciones móviles y más, Yesid está listo para ayudarte a alcanzar el éxito tecnológico.">
-
-    
   <Presentacion />
   <Experiencia />
   <Proyectos />
-
-<!--- Seccion Proyectos --->
-  <section class="">
-
-  </section>
-
-
-  <script>
-    const darkModeInput = document.getElementById("theme-toggle");
-    const html = document.documentElement;
-
-    if (darkModeInput) {
-      	darkModeInput.addEventListener("click", () => {
-		html.classList.toggle("dark");
-		const newTheme = html.classList.contains("dark") ? "Dark" : "Light";
-   
-      });
-    }
-  </script>
+  <Tecnologias />
 </Layout>
 
 <style>

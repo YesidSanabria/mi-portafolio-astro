@@ -1,7 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  darkMode: ['class',], // 👈 permitimos en body
-  content: ['./src/**/*.{astro,html,js,jsx,ts,tsx,vue,svelte}',],
-  theme: { extend: {} },
+  content: [
+    './src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
+  ],
+  theme: {
+    extend: {},
+  },
+  darkMode: 'class',
   plugins: [],
 }

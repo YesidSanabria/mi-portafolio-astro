@@ -12,8 +12,8 @@ const { title, description = "Portafolio de Yesid Sanabria - Desarrollador Full 
 ---
 
 <!DOCTYPE html>
-<html lang="es" class="dark">
-  <head>
+<html lang="es">
+  <head>    
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -29,8 +29,8 @@ const { title, description = "Portafolio de Yesid Sanabria - Desarrollador Full 
   </head>
 
   <!-- Estructuracion de componentes y paginas -->
-  <body class="text-black dark:text-white transition-colors duration-300">
-    <Header />
+  <body class="bg-[image:var(--background-gradient)] transition-colors duration-300">
+  <Header />
     <main>
       <slot />
     </main>
@@ -56,19 +56,18 @@ const { title, description = "Portafolio de Yesid Sanabria - Desarrollador Full 
     --background: #CDD5DB;
     --background-border: #ebebeb;
 
+    --card-background: #CDD5DB;
+    --card-text: #000000;
+    --tag-color: #04254d;
     --background-gradient: linear-gradient(to bottom, #CDD5DB, #02244d);
     --background-prefoter: #02244d;
     --background-footer: #02244d;
   }
   
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+ 
   
   .dark{
-    color-scheme: light dark;
+    color-scheme: dark;
     --colobra: #58A6FF;
     --scrollbarco: #000000;
     --primary-blue: #58A6FF;
@@ -82,9 +81,18 @@ const { title, description = "Portafolio de Yesid Sanabria - Desarrollador Full 
     --background: #021A37;
     --background-border: rgb(27, 27, 27);
 
-     --background-gradient: linear-gradient(to bottom, #06254e, #01010c 45%, #06254e);
-     --background-prefoter: #02244d;
+    --card-background: #021A37;
+    --card-text: #ffffff;
+    --tag-color: #04254d;
+    --background-gradient: linear-gradient(to bottom, #06254e, #01010c 25%, #06254e);
+    --background-prefoter: #02244d;
      --background-footer: linear-gradient(to bottom, #051b35 0%, #010f20 100%);
+  }
+
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
 
 
@@ -93,9 +101,9 @@ const { title, description = "Portafolio de Yesid Sanabria - Desarrollador Full 
     scroll-behavior: smooth;
   }
 
-  body {
-    background: var(--background-gradient);
-    justify-content: center;
+  .card {
+  background: var(--card-background);
+  color: var(--card-text);
   }
  
   main {
@@ -131,15 +139,6 @@ const { title, description = "Portafolio de Yesid Sanabria - Desarrollador Full 
   .section {
     padding: 4rem 0;
   }
-  
-  .text-gradient {
-    background: linear-gradient(135deg, var(--primary-green), #22c55e);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  
 </style>
 
 

@@ -1,21 +1,20 @@
 ---
 import Card from '../ui/Card.astro';
 import { getCollection } from 'astro:content';
-import projects from '../data/proyectos.json'; // ¡Importamos los datos!
-
 const proyectos = await getCollection('proyectos');
 console.log(proyectos);
-
 ---
-
-<section class="hero" id="proyectos">
+<section id="proyectos" class="hero">
     <div class="flex flex-col items-center text-center">
-        <h1 class="mx-auto mt-2 max-w-max text-center font-bold tracking-tight text-balance text-white sm:text-5xl">
-            <span class="dark:text-[var(--text-terceary)] text-black">Proyectos</span>
+        <h1 class="mx-auto mt-2 max-w-max text-center font-bold tracking-tight text-balance text-[var(--text-primary)] sm:text-5xl">
+            <span class="text-[var(--text-terceary)]">Proyectos</span>
             Terminados
         </h1>
+        <p class="z-2 text-center mx-auto text-lg max-xl:text-base max-w-2xl text-[var(--text-primary)] my-6 leading-6 font-medium">
+        Me encanta <b class="text-[var(--text-terceary)]">convertir ideas en proyectos reales.</b> <br> Aquí les muestro algunos de los <b class="text-[var(--text-terceary)]">desarrollos</b> en los que he trabajado, aplicando tecnología, diseño y mucha creatividad.
+        <b class="text-[var(--text-terceary)]">Hagan un vistazo!</b> </p>
         <Card />
-        <a href="/" class="">          
+        <a href="/" class="proy">          
           Ver todos los proyectos
         </a>
     </div>
@@ -40,4 +39,11 @@ console.log(proyectos);
 }
 .hero h1{
     padding-bottom: 20px;
+}
+.hero p{
+    text-align: center;
+}
+.proy{
+
+    padding-top: 60px;
 }
