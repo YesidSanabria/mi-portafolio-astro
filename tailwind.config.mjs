@@ -5,10 +5,10 @@ export default {
   ],
   
   safelist: [
-  "bg-[var(--background-gradient)]",
     "dark:bg-[var(--background-gradient)]",
-    "bg-[image:var(--background-gradient)]",
+    "bg-[var(--background-gradient)]",
     "dark:bg-[image:var(--background-gradient)]",
+    "bg-[image:var(--background-gradient)]",
 ],
   theme: {
     extend: {},
