@@ -1,7 +1,7 @@
 const btn = document.getElementById("theme-toggle");
 const html = document.documentElement;
 
-if (localStorage.getItem("theme") === "dark") {
+if (localStorage.getItem("theme") === "light") {
   html.classList.add("dark");
 } else {
   html.classList.remove("dark");
