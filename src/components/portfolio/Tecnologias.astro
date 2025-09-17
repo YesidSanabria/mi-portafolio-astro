@@ -128,3 +128,19 @@
   line-height: 1.2;
   flex-shrink: 0;
  }
+
+ /* RESPONSIVE STYLES */
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr 1fr; /* 2 columnas en pantallas medianas (tablets) */
+    }
+}
+
+@media (max-width: 640px) {
+    .grid {
+        grid-template-columns: 1fr; /* 1 columna en pantallas pequeñas (móviles) */
+    }
+    .ulcontent {
+        grid-template-columns: repeat(2, 1fr); /* Las tecnologías se ajustan en 2 columnas */
+    }
+}
