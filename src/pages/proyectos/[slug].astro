@@ -76,8 +76,9 @@ for (let i = 1; i <= 4; i++) {
 
     <section class="prose prose-lg prose-invert max-w-none prose-p:leading-relaxed prose-p:text-gray-300">
         <p>{project.descripcionCorta}</p>
+        <br>
         <p>{project.descripcionLarga}</p>
-    
+  
         <h2 class="text-[var(--text-primary-project)] !text-2xl !font-bold !mb-4 !mt-12">Funcionalidades</h2>
         <p>{project.funcionalidades}</p>
         <br>
@@ -102,7 +103,9 @@ for (let i = 1; i <= 4; i++) {
     </section>
 
     <section class="mt-12">
-      <h2 class="text-cyan-400 text-2xl font-bold mb-4">Tecnologías</h2>
+      <br>
+      <h2 class="text-[var(--text-terceary-project)] text-2xl font-bold mb-4">Tecnologías</h2>
+      <br>
       <div class="bg-slate-800/40 rounded-lg overflow-hidden border border-slate-700/50">
         <div class="divide-y divide-slate-700/50">
           {tecnologiasTabla.map(tech => (
@@ -135,5 +138,31 @@ for (let i = 1; i <= 4; i++) {
 
 .subti{
   padding: 15px;
+}
+
+/* Tablets (pantallas medianas) */
+@media (max-width: 1024px) {
+  .hero {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+}
+
+/* Móviles grandes */
+@media (max-width: 768px) {
+  .hero {
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 80px;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+  .hero {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 60px;
+  }
 }
 </style>
