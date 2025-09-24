@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
-    // Función para manejar el clic en los enlaces del menú
     const handleNavClick = (e) => {
         const href = e.target.getAttribute('href');
         const isInternalLink = href.startsWith('/');
@@ -48,7 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const targetSection = document.getElementById(targetId);
             if (targetSection) {
                 // Usa scrollIntoView para un desplazamiento suave y preciso.
-                // Es la forma moderna y recomendada para este tipo de navegación.
                 targetSection.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
